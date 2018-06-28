@@ -32,4 +32,9 @@ public class EmployeeRepositoryServiceImpl implements EmployeeRepositoryService 
 		return this.employeeRepository.save(employee);
 	}
 
+	@Override
+	public List<Employee> findByDepartment(String department) {
+		return this.employeeRepository.findByDepartment(department);
+	}
+
 }

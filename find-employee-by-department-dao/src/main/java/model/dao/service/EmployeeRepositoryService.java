@@ -11,4 +11,7 @@ public interface EmployeeRepositoryService {
 	public List<Employee> findAll();
 
 	public Employee create(Employee employee);
+	
+	List<Employee> findByDepartment(String department);
+	
 }
