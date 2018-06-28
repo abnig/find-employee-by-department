@@ -31,7 +31,7 @@
 		</dependency>
 		<dependency>
 			<groupId>spring.boot.poc</groupId>
-			<artifactId>find-employee-dao</artifactId>
+			<artifactId>find-employee-by-department-dao</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
