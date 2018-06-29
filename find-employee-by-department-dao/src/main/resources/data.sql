@@ -1,0 +1,10 @@
+create schema TESTDB;
+
+CREATE TABLE TESTDB.T_EMP (EMPLOYEE_ID bigint auto_increment,
+FNAME varchar(255),
+LNAME varchar(255),
+SALARY bigint,
+JOIN_DATE date,
+DEPARTMENT varchar(255));
+
+INSERT INTO TESTDB.T_EMP (FNAME,LNAME,SALARY,JOIN_DATE,DEPARTMENT) VALUES ('TestName2','Lname',620000,{ts '2012-09-17 18:47:52.69'},'Insurance');

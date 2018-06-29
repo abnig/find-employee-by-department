@@ -13,7 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "T_EMP")
+@Table(name = "T_EMP", schema = "testdb")
 public class Employee {
 
 	@Id
