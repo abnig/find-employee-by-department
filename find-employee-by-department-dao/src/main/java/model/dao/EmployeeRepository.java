@@ -13,7 +13,7 @@ import model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 	
 	@Query("SELECT p FROM Employee p WHERE LOWER(p.department) = LOWER(:department)")
-	public List<Employee> findByDepartment(String department);
+	public List<Employee> findByDepartment(@Param("department") String department);
 
 }
 
