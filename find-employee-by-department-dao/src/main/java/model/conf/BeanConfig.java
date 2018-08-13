@@ -24,7 +24,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = { "model" })
 @ComponentScan("model")
-@PropertySource("application.properties")
+@PropertySource("dao.properties")
 public class BeanConfig {
 	
 	@Autowired

@@ -3,6 +3,7 @@ package rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,8 @@ import model.dao.service.EmployeeRepositoryService;
 
 @RestController
 public class EmployeeByDepartmentController {
+	
+	org.slf4j.Logger logger = LoggerFactory.getLogger(EmployeeByDepartmentController.class);
 
 	@Autowired
 	private EmployeeRepositoryService employeeRepositoryServiceImpl;
@@ -25,7 +28,7 @@ public class EmployeeByDepartmentController {
 	@RequestMapping(value = "/department/{department}", method = RequestMethod.GET)
 	@ResponseBody
 	public List<Employee> greeting(@PathVariable(value = "department") String department) {
-		System.out.println("Recieved department:" + department);
+		logger.info("Received department: " + department);
 		return this. employeeRepositoryServiceImpl.findByDepartment(department);
 	}
 
